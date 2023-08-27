@@ -1,8 +1,71 @@
-##### Data_Analysis_with_Unix_1
-      '$mkdir manoj'
+## How do I obtain a data file that is online?
 
-###create the directory
-      *mkdir unixrx
+We can use either the curl or wget command line tool to download the content of URLs.
 
-###clear the screen
-      $clear
+## Usage/Examples
+
+```
+# Create a working directory for a Unix tutorial work.
+mkdir unix_tutorial
+
+# Switch to the new directory you will work in.
+cd unix_tutorial
+
+# Get the data from SGD.
+wget http://data.biostarhandbook.com/data/SGD_features.tab 
+
+# Also get the README file.
+wget http://data.biostarhandbook.com/data/SGD_features.README
+
+# Quick check. Where are you and what have you got?
+pwd
+ls
+```
+## What is flag?
+A “flag” in Unix terminology is a parameter added to the command. 
+
+```
+ls -l
+```
+we can use the manual to learn more about a command:
+```
+man ls
+```
+or we can use the help command if the tool does not have a manual 
+```
+histat2 --help
+```
+read more
+```
+more SGD_features.README
+```
+## How do I open a stream from data?
+The cat command concatenates one or more files and starts producing them.
+```
+cat SGD_features.tab
+```
+#How many lines does the file have?
+We can pipe the output into another program rather than the screen. Use the pipe (|) character to connect the programs. For example, the wc program is the word counter.
+```
+cat SGD_features.tab | wc
+cat SGD_features.tab | wc -l
+```
+# How does the file start?
+
+```
+cat SGD_features.tab | head
+```
+# Which lines match a specific pattern?
+For example, we wanted to find information on gene YAL060W
+```
+cat SGD_features.tab | grep YAL060W
+
+# How do I store the results in a new file?
+```
+cat SGD_features.tab | grep YAL060W > match.tab
+```
+# How can we tell how many lines DO NOT match a given pattern?
+Adding the -v flag to grep reverses the action of grep it shows the lines that do not match.
+```
+cat SGD_features.tab | -v Dubious | wc -l
+```
