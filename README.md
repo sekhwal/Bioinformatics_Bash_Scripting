@@ -105,7 +105,7 @@ conda install entrez-direct
 # Improved pattern.
 cat types.txt | sort-uniq-count-rank | head
 ```
-[Unix Tutorial 2](https://github.com/matiassingers/awesome-readme)
+[Unix Tutorial 2]([https://github.com/matiassingers/awesome-readme](https://github.com/sekhwal/RNASeq-workflow))
 
 ##### Referred from
 This tutorial is referred from [Biostar](https://www.biostarhandbook.com/)
