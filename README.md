@@ -103,3 +103,6 @@ conda install entrez-direct
 # Improved pattern.
 cat types.txt | sort-uniq-count-rank | head
 ```
+##### Referred from
+This tutorial is referred from [Biostar](https://www.biostarhandbook.com/)
+
